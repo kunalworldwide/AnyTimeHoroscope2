@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorNavIcon">#FFFF</color>
+    <color name="colorNavText">#01294b</color>
+
+
+    <color name="HomeNavBar">#0d47a1</color>
+    <color name="HomeFragmentBG">#bbdefb</color>
+    <color name="HomeFragmentAppbar">#2196f3</color>
+    <color name="HomeBackgroundTransparent">#00ffffff</color>
+
+    <color name="OfflineNavBar">#bf360c</color>
+    <color name="OfflineFragmentBG">#ffccbc</color>
+    <color name="OfflineFragmentAppbar">#ff5722</color>
+
+    <color name="OnlineNavBar">#1b5e20</color>
+    <color name="OnlineFragmentBG">#c8e6c9</color>
+    <color name="OnlineFragmentAppbar">#4caf50</color>
+
+    <color name="SettingsNavBar">#f57f17</color>
+    <color name="SettingsFragmentBG">#fff9c4</color>
+    <color name="SettingsFragmentAppbar">#ffeb3b</color>
+
+</resources>
