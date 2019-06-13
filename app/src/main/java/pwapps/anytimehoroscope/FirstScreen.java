@@ -10,12 +10,15 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import pwapps.anytimehoroscope.Fragments.HomeFragment;
+import pwapps.anytimehoroscope.Fragments.OfflineFragment;
+import pwapps.anytimehoroscope.Fragments.OnlineFragment;
+import pwapps.anytimehoroscope.Fragments.SettingsFragment;
 
 public class FirstScreen extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
@@ -135,11 +138,6 @@ public class FirstScreen extends AppCompatActivity implements BottomNavigationVi
         String firstname = userdata.getString("FirstName", "");
         return firstname;
     }
-
-
-
-
-
 
     public void onRestart()         //Everytime this activity is restarted when back etc button is pressed
     {

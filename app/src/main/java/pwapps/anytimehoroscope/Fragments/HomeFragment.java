@@ -1,4 +1,4 @@
-package pwapps.anytimehoroscope;
+package pwapps.anytimehoroscope.Fragments;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import pwapps.anytimehoroscope.R;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -24,10 +26,18 @@ public class HomeFragment extends Fragment {
         //if it is DashboardFragment it should have R.layout.fragment_dashboard
 
         TextView mtext=fragmentView.findViewById(R.id.texth);
-        String hello="HELLO"+"\n"+getFirstName().substring(0,1).toUpperCase()+getFirstName().substring(1);
+
+        if(getFirstName().isEmpty() || getZodiac().isEmpty())
+        {
+            mtext.setText("Register FIRST");
+        }
+        else
+        {
+
+        String hello="HELLO"+"\n"+getFirstName();//.substring(0,1).toUpperCase()+getFirstName().substring(1);
         String sign="\n"+"YOUR SIGN IS"+"\n"+getZodiac();
         mtext.setText(hello+sign);
-
+        }
         return fragmentView;
     }
 
@@ -37,10 +47,10 @@ public class HomeFragment extends Fragment {
         return firstname;
     }
 
-    public String getZodiac()
-    {
+    public String getZodiac() {
         SharedPreferences userdata = getActivity().getSharedPreferences("Sign", MODE_PRIVATE);
         String zodiac = userdata.getString("Sign", "");
         return zodiac;
     }
 }
+

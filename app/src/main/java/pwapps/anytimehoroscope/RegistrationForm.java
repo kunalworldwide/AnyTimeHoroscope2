@@ -20,6 +20,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+import pwapps.anytimehoroscope.Fragments.OfflineFragment;
+
 import static android.webkit.ConsoleMessage.MessageLevel.LOG;
 
 public class RegistrationForm extends AppCompatActivity {
@@ -81,11 +83,18 @@ public class RegistrationForm extends AppCompatActivity {
                 if(getFirstName().equalsIgnoreCase(kFirstName.getText().toString()) && getZodiac()!="")
                 {
                     Toast.makeText(RegistrationForm.this, "Success!", Toast.LENGTH_SHORT).show();
+
                 }
             }
 
 
         });
+
+
+//        Intent sendSign = new Intent(RegistrationForm.this, OfflineFragment.class);
+//        sendSign.putExtra("zodiac",getZodiac());
+//        startActivity(sendSign);
+
 
       //  onBackPressed();
     }
@@ -110,7 +119,6 @@ public class RegistrationForm extends AppCompatActivity {
         SharedPreferences.Editor mEditor = userdata.edit();
         mEditor.putString("FirstName", fname);
         mEditor.apply();
-
     }
 
     public void storeBirthdate(int bday[]) {                //Storing date in sharedpreffs
