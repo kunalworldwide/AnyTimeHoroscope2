@@ -3,3 +3,6 @@ horoscope which get fetched from server as well as user can check categorized da
 in offline mode which was created using recycler view.
 The whole application has bottom navigation bar implemented which helps user in
 navigating the menus in material design the easy way
+
+
+https://photos.app.goo.gl/T2ax1f4oQZMc5XxJ8
